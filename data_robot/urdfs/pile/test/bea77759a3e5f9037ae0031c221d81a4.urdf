@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="bea77759a3e5f9037ae0031c221d81a4">
+  <link name="base_link">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <mass value="0.0108200894917"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="bea77759a3e5f9037ae0031c221d81a4_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="bea77759a3e5f9037ae0031c221d81a4_collision.obj"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
