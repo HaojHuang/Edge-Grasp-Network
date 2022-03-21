@@ -13,7 +13,6 @@ conda create -n grasp_classifier python=3.8
 **Step 3.** Install the required packages
 
 ```shell
-pip install -U pip>=20.3
 pip install open3d
 pip install pybullet==2.7.9
 ```
