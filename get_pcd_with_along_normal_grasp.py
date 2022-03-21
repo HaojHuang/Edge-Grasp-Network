@@ -95,7 +95,12 @@ def main(args):
                 #grasp_depth = np.random.uniform(4 * eps * finger_depth, (1.0 - 2*eps) * finger_depth)
                 grasp_depth = 0.045
                 p = p + n * grasp_depth
-                grasp,label,des_list,idx_of_peak,labels = evaluate_grasp_point_3(sim,p,n,l)
+                res = evaluate_grasp_point_3(sim,p,n,l)
+                if res is None:
+                    continue
+                else:
+                    grasp, label, des_list, idx_of_peak, labels = res
+
                 write_grasp_mutil_labels(args.root, scene_id, grasp, label, idx_global, idx_of_peak,labels)
                 #print('label', label)
 
