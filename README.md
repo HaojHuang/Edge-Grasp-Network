@@ -18,6 +18,8 @@ pip install pybullet==2.7.9
 The `pcd` subdirectory contains the `.npz` data with `[vertices=vertices, vertice_normals = vertice_normals]`, the 
 `grasp_multi_labels.csv` contains the detailed grasp information of each sampled point.
 
+Or download generated data [here]().
+
 ```shell
 python get_pcd_with_along_normal_grasp.py data_robot/raw/foo
 ```
