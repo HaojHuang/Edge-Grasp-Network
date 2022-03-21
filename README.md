@@ -7,7 +7,7 @@
 conda create -n grasp_classifier python=3.8
 ```
 
-**Step 2.** Install Pytorch
+**Step 2.** Install [Pytorch](https://pytorch.org/get-started/locally/)
 
 
 **Step 3.** Install the required packages
