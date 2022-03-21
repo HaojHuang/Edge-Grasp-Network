@@ -1,13 +1,19 @@
 # Panda-gripper Simulation Environment for Grasp
 
 ## Installation
-**Step 1.** Recommended: install `conda` with Python 3.7.
+**Step 1.** Recommended: install `conda` with Python 3.8.
+
+```shell
+conda create -n grasp_classifier python=3.8
+```
 
 **Step 2.** Install Pytorch
+
 
 **Step 3.** Install the required packages
 
 ```shell
+pip install -U pip>=20.3
 pip install open3d
 pip install pybullet==2.7.9
 ```
