@@ -38,8 +38,8 @@ def vis_samples_2(cloud, pos, neg):
         o3d.visualization.draw_geometries([inlier1_cloud, outlier_cloud],)
 
 
-pcd_path = Path('data_robot/raw/foo') / "pcd"
-df = pd.read_csv('data_robot/raw/foo/grasps_multi_labels.csv')
+pcd_path = Path('./raw/foo') / "pcd"
+df = pd.read_csv('./raw/foo/grasps_multi_labels.csv')
 
 #print(df['label'])
 scene_ids = [f for f in pcd_path.iterdir() if f.suffix == ".npz"]
