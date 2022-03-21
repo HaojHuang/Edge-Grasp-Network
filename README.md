@@ -18,12 +18,11 @@ pip install pybullet==2.7.9
 ```
 
 ## Getting Started
-**Step 1.** Generate training and testing data. Data is saved to the `data_robot/raw/foo` directory.
+**Step 1.** Generate training and testing data. Data is saved to the `data_robot/raw/foo` directory. Or download generated data [here](https://github.com/HaojHuang/grasp_classifier/tree/main/dataset).
 
 The `pcd` subdirectory contains the `.npz` data with `[vertices=vertices, vertice_normals = vertice_normals]`, the 
 `grasp_multi_labels.csv` contains the detailed grasp information of each sampled point.
 
-Or download generated data [here](https://github.com/HaojHuang/grasp_classifier/tree/main/dataset).
 
 ```shell
 python get_pcd_with_along_normal_grasp.py data_robot/raw/foo
