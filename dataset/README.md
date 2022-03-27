@@ -9,3 +9,9 @@ python vis_data.py
 
 
 **Step 3.** install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
+
+**Step 4.**
+
+```
+python dataset_pyg.py
+```
