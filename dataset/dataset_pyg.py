@@ -87,7 +87,8 @@ class Grasp_Dataset(InMemoryDataset):
                 #continue
             if len(scene_df_positive) < 20:
                 #print('not enough positive')
-                continue
+                #continue
+                pass
             # print(scene_ids[i])
             v, n = read_data(scene_ids[_i])
             #pcd = vis_pcd(v, n, vis=False)
@@ -155,7 +156,7 @@ class GraspNormalization:
         data.pos = pos
         return data
 
-dataset = Grasp_Dataset(root='data_robot/raw/foo',train=True)
+dataset = Grasp_Dataset(root='raw/foo',train=True)
 print(len(dataset))
 loader = DataLoader(dataset,batch_size=2,shuffle=False)
 for batch in loader:
