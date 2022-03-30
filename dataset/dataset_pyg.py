@@ -92,6 +92,7 @@ class Grasp_Dataset(InMemoryDataset):
             # print(scene_ids[i])
             v, n = read_data(scene_ids[_i])
             #pcd = vis_pcd(v, n, vis=False)
+            label = torch.as_tensor(num_positive_mask).to(torch.long)
             labels = scene_df.loc[:, "label_0":"label_8"].to_numpy()
             total_pt_number = np.arange(0, len(v), 1)
             nums_success = labels.sum(axis=-1)
@@ -130,7 +131,7 @@ class Grasp_Dataset(InMemoryDataset):
             orientations_gt = torch.from_numpy(rotations_gt).to(torch.float)
             data = Data(pos=v,normals=n,positive_mask=positive_mask,negative_mask=negative_mask,
                         positive_pitch=positive_pitch,position_gt=position_gt,orientation_gt=orientations_gt,
-                        labels=labels)
+                        labels=labels,label=label)
             pn = pn+len(positive_mask)
             nn = nn+len(negative_mask)
             #print(data)
