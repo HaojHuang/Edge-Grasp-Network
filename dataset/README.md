@@ -10,7 +10,7 @@ python vis_data.py
 
 **Step 3.** install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 
-**Step 4.** Generate the PyG-version Dataset
+**Step 4.** Generate the PyG-style Dataset
 
 ```
 python dataset_pyg.py
