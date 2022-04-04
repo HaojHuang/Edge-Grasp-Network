@@ -22,7 +22,7 @@ python dataset_pyg.py
 python vis_grasp.py
 ```
 
-**Step 6.** Train the model: aggregation.py uses PointNetConv; aggregation_2 uses PPFConv. The classifier is composed of a shallow MLPs with sigmoid as the last layer.
+**Step 6.** Train the model: aggregation.py uses PointNetConv; aggregation_2.py uses PPFConv. The classifier is composed of a shallow MLPs with sigmoid as the last activation layer.
 
 ```
 python train.py
