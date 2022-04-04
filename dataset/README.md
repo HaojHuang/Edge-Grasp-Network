@@ -10,8 +10,22 @@ python vis_data.py
 
 **Step 3.** install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 
-**Step 4.**
+**Step 4.** Generate the PyG-version Dataset
 
 ```
 python dataset_pyg.py
 ```
+
+**Step 5.** Visual the grasp pose 
+
+```
+python vis_grasp.py
+```
+
+**Step 6.** Train the model 
+
+```
+python train.py
+```
+
+
