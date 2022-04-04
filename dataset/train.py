@@ -1,6 +1,6 @@
 from dataset_pyg import Grasp_Dataset, GraspNormalization
 from torch_geometric.data import DataLoader
-from aggregation_model_2 import PointNet
+from aggregation_model import PointNet
 import torch
 import torch.nn.functional as F
 import os
