@@ -63,7 +63,7 @@ class Grasp_Dataset(InMemoryDataset):
 
     def download(self):
         # Download to `self.raw_dir`.
-        return 
+        return
     def process(self):
         df = pd.read_csv(self.cvs_path)
         scene_ids = [f for f in self.pcd_path.iterdir() if f.suffix == ".npz"]
@@ -73,6 +73,7 @@ class Grasp_Dataset(InMemoryDataset):
         for _i in range(len(scene_ids)):
             scene_id = str(scene_ids[_i])
             sparsed = scene_id.split('/')
+            #sparsed = scene_id.split('\\')
             # print(sparsed)
             scene_id = sparsed[-1][:-4]
             scene_df = df[df["scene_id"] == scene_id]
@@ -81,18 +82,17 @@ class Grasp_Dataset(InMemoryDataset):
             #print(scene_id)
             #print('positive number', len(scene_df_positive), '; negative number', len(scene_df_negative))
             if len(scene_df_negative) == 0:
-
                 #print('no negative data: ', _i)
+                continue
                 pass
                 #continue
             if len(scene_df_positive) < 20:
                 #print('not enough positive')
-                #continue
+                continue
                 pass
             # print(scene_ids[i])
             v, n = read_data(scene_ids[_i])
             #pcd = vis_pcd(v, n, vis=False)
-            label = torch.as_tensor(num_positive_mask).to(torch.long)
             labels = scene_df.loc[:, "label_0":"label_8"].to_numpy()
             total_pt_number = np.arange(0, len(v), 1)
             nums_success = labels.sum(axis=-1)
@@ -110,8 +110,9 @@ class Grasp_Dataset(InMemoryDataset):
             positive_pitch = scene_nums_positive['pitch_idx'].to_numpy()
             positive_width = scene_nums_positive['width'].to_numpy()
             #positive_normal = n[positive_mask, :]
-            orientation_gt = scene_nums_positive.loc[:, "qx":"qw"].to_numpy()
-            position_gt = scene_nums_positive.loc[:, "x":"z"].to_numpy()
+            orientation_gt = scene_df.loc[:, "qx":"qw"].to_numpy()
+            position_gt = scene_df.loc[:, "x":"z"].to_numpy()
+            #print(orientation_gt.shape)
             #  To torch.tensor
             v = torch.from_numpy(v).to(torch.float)
             n = torch.from_numpy(n).to(torch.float)
@@ -119,11 +120,16 @@ class Grasp_Dataset(InMemoryDataset):
             negative_mask = torch.from_numpy(negative_mask).to(torch.long)
             print('positive number', len(positive_mask), '; negative number', len(negative_mask))
             positive_pitch = torch.from_numpy(positive_pitch).to(torch.long)
+            #print(num_positive_mask)
+            positive_numbers = torch.as_tensor(len(positive_mask)).to(torch.long)
+            negative_numbers = torch.as_tensor(len(negative_mask)).to(torch.long)
+            points_numbers = torch.as_tensor(len(v)).to(torch.long)
+            label = torch.as_tensor(num_positive_mask).to(torch.long)
             labels = torch.from_numpy(labels).to(torch.long)
-            rotations_gt = np.empty((len(positive_mask), 2, 4), dtype=np.single)
+            rotations_gt = np.empty((len(orientation_gt), 2, 4), dtype=np.single)
             # process the rotation label
             R = Rotation.from_rotvec(np.pi * np.r_[0.0, 0.0, 1.0])
-            for pos_num in range(len(positive_mask)):
+            for pos_num in range(len(orientation_gt)):
                 ori = Rotation.from_quat(orientation_gt[pos_num])
                 rotations_gt[pos_num, 0, :] = ori.as_quat()
                 rotations_gt[pos_num, 1, :] = (ori * R).as_quat()
@@ -131,7 +137,8 @@ class Grasp_Dataset(InMemoryDataset):
             orientations_gt = torch.from_numpy(rotations_gt).to(torch.float)
             data = Data(pos=v,normals=n,positive_mask=positive_mask,negative_mask=negative_mask,
                         positive_pitch=positive_pitch,position_gt=position_gt,orientation_gt=orientations_gt,
-                        labels=labels,label=label)
+                        labels=labels,label=label,positive_numbers =positive_numbers, negative_numbers=negative_numbers,
+                        points_numbers=points_numbers,)
             pn = pn+len(positive_mask)
             nn = nn+len(negative_mask)
             #print(data)
@@ -149,12 +156,14 @@ class GraspNormalization:
         self.center = True
         self.scale=  False
     def __call__(self,data:Data):
-
         pos = data.pos
+        position_gt = data.position_gt
         center = pos.mean(dim=0,keepdim=True)
         #print('============================',pos.size(),center.size())
         pos = pos - center
+        position_gt = position_gt - center
         data.pos = pos
+        data.position_gt = position_gt
         return data
 
 dataset = Grasp_Dataset(root='raw/foo',train=True)
