@@ -120,6 +120,7 @@ cudnn.benchmark = False
 cudnn.deterministic = True
 pytorch_total_params = sum(p.numel() for p in model.parameters())
 train_dataset = Grasp_Dataset(root='./raw/foo',train=True, transform = GraspNormalization())
+# remove the 10 below to use the entire dataset
 train_loader = DataLoader(train_dataset[:10],batch_size=1,shuffle=False)
 test_dataset = Grasp_Dataset(root='./raw/foo',train=False, transform = GraspNormalization())
 test_loader = DataLoader(test_dataset[:10],batch_size=1,shuffle=False)
