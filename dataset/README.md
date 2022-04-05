@@ -1,5 +1,5 @@
 
-**Step 1.** unzip the raw.zip file
+**Step 1.** unzip the raw.zip file (raw1.zip is the most recent one)
 
 **Step 2.** try the vis_data.py to explore the data structure
 
