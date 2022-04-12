@@ -13,7 +13,7 @@ python vis_data.py
 **Step 4.** Generate the PyG-style Dataset
 
 ```
-python dataset_pyg.py
+python edge_grasper_dataset.py
 ```
 
 **Step 5.** Visual the grasp pose 
@@ -22,8 +22,8 @@ python dataset_pyg.py
 python vis_grasp.py
 ```
 
-**Step 6.** Train the model: aggregation.py uses PointNetConv; aggregation_2.py uses PPFConv. The classifier is composed of a shallow MLPs with sigmoid as the last activation layer.
+**Step 6.** Train the model: The classifier is composed of a MLPs with sigmoid as the last activation layer.
 
 ```
-python train.py
+python edge_grasper.py
 ```
