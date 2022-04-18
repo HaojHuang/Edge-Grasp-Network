@@ -84,7 +84,7 @@ class EdgeLabel:
         radius_p_index = radius_p_batch_index[1, :]
         radius_p_batch = radius_p_batch_index[0, :]
         sample = torch.from_numpy(sample)
-        sample_node = torch.from_numpy(sample).unsqueeze(dim=-1)
+        sample_node = sample.unsqueeze(dim=-1)
         sample_node = torch.cat([sample_node[i, :].repeat((radius_p_batch == i).sum(),1) for i in range(len(sample))],dim=0)
         sample_pos = torch.cat([sample_pos[i, :].repeat((radius_p_batch == i).sum(), 1) for i in range(len(sample))],dim=0)
         sample_normal = torch.cat(
@@ -102,8 +102,8 @@ class EdgeLabel:
                                                                                    relative_pos, des_normals,
                                                                                    sample_normal, sample_pos, data.pos,
                                                                                    use_o3d=False, strict=True)
-        edges_index = torch.cat((sample_node,radius_p_index.unsqueeze(dim=-1)),dim=-1).T
-        data.edge_index = edges_index
+        #edges_index = torch.cat((sample_node,radius_p_index.unsqueeze(dim=-1)),dim=-1).T
+        #data.edge_index = edges_index
         data.edge_mask = geometry_mask
         data.depth_projection = depth_projection
         data.dot1 = normals_dot
