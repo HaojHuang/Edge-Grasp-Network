@@ -120,7 +120,6 @@ if test:
     for batch in loader:
         print(batch)
         print(batch.ptr)
-        print(batch.edge_index)
         # if sum(batch.edge_mask):
         #     draw_grasps(batch.edge_mask, batch.depth_projection,
         #                 batch.normals[batch.edge_index[0,:],:], batch.normals[batch.edge_index[1,:],:],
