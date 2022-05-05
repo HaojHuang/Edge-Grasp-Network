@@ -12,6 +12,6 @@
 
 ### How to use
 - If want to load the existed model, please run the 'edge_grasper_dataset.py' directly.
-- If want to train the new dataset, please set the 'train' varient to 'False' at line 199 of 'edge_grasper_dataset.py'
+- If want to train the new model, please set the 'train' variable to 'False' at line 199 of 'edge_grasper_dataset.py'
 
 
