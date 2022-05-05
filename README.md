@@ -28,4 +28,4 @@ python generate_data_grasp_label.py
 ```
 The `pcd` subdirectory contains the `.npz` data with `[vertices=vertices, vertice_normals = vertice_normals]`
 
-**Step 3.** Train a model: go to `model` directory
+**Step 3.** Train a model: go to `model` directory or `SVM_LG`.
