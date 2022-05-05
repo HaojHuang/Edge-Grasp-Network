@@ -1,4 +1,4 @@
-If you want to generate the data by your own, you need to refer the readme here. Otherwise, go directly to the 'discovery' directory.
+If you want to generate the data by your own, you need to refer the readme here. Otherwise, go directly to the `discovery` directory.
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (vtk doesn't support 3.8)
