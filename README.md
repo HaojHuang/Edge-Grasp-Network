@@ -1,4 +1,4 @@
-If you want to generate the data by your own, you need to refer the readme here. Otherwise, go directly to the `discovery` directory directly.
+If you want to generate the data by your own, you need to follow the readme here. Otherwise, go directly to the `model` directory.
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (vtk doesn't support 3.8)
@@ -9,7 +9,6 @@ conda activate grasp_classifier
 pip install opencv-python pillow scipy matplotlib
 conda install mayavi -c conda-forge
 ```
-
 **Step 2.** Install [Pytorch](https://pytorch.org/get-started/locally/)
 
 **step 3.** Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
@@ -29,4 +28,4 @@ python generate_data_grasp_label.py
 ```
 The `pcd` subdirectory contains the `.npz` data with `[vertices=vertices, vertice_normals = vertice_normals]`
 
-**Step 3.** Train a model: go to `discovery` directory
+**Step 3.** Train a model: go to `model` directory
