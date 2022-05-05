@@ -1,4 +1,4 @@
-If you want to generate the data by your own, you need to refer the readme here. Otherwise, go directly to the `discovery` directory.
+If you want to generate the data by your own, you need to refer the readme here. Otherwise, go directly to the `data_robot` directory directly.
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (vtk doesn't support 3.8)
@@ -29,4 +29,4 @@ python generate_data_grasp_label.py
 ```
 The `pcd` subdirectory contains the `.npz` data with `[vertices=vertices, vertice_normals = vertice_normals]`
 
-**Step 3.** Train a model: go to `discovery` directory
+**Step 3.** Train a model: go to `data_robot` directory
