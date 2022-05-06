@@ -1,4 +1,4 @@
-If you want to generate the data by your own, you need to follow the readme here. Otherwise, go directly to the `model` directory.
+If you want to generate the data by your own, you need to follow the readme here. Otherwise, go directly to the `model` or the`SVM_LG` directory.
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (vtk doesn't support 3.8)
