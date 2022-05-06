@@ -178,9 +178,9 @@ def load_data(dataloader, count_limited, comatrix):
 
 test = True
 if test:
-    dataset = Grasp_Dataset(root='./raw/foo', pre_transform=Compose([GraspNormalization(), EdgeLabel()]),
+    dataset = Grasp_Dataset(root='./raw/raw/foo', pre_transform=Compose([GraspNormalization(), EdgeLabel()]),
                             train=True)
-    test_dataset = Grasp_Dataset(root='./raw/foo', pre_transform=Compose([GraspNormalization(), EdgeLabel()]),
+    test_dataset = Grasp_Dataset(root='./raw/raw/foo', pre_transform=Compose([GraspNormalization(), EdgeLabel()]),
                                  train=False)
     trn_loader = DataLoader(dataset, batch_size=1, shuffle=False)
     tst_loader = DataLoader(test_dataset, batch_size=1, shuffle=False)

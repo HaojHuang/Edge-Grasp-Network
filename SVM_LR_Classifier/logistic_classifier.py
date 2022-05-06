@@ -45,16 +45,21 @@ def logistic_reg_classifier(X_trn, Y_trn, X_tst, Y_tst, model_name, train=True):
 
     # the score of this training.
     print(f'{datetime.now()} : Testing model...')
-    score_tst = clf.score(X_tst, Y_tst)
-
-    # f1 score.
     Y_predict = clf.predict(X_tst)
+
+    # accuracy
+    score_tst = sum((Y_predict == Y_tst.numpy())) / len(Y_tst)
 
     positive_bool = Y_predict > 0.5
     print('positive prediction number', sum(positive_bool))
     print(f'total num of test:{len(X_tst)}')
+
+    # F1 score
     f1 = f1_score(Y_tst, Y_predict, zero_division=1)
+
+    # balanced_score
     balanced_score = balanced_accuracy_score(Y_tst, Y_predict)
+
     print(f'{datetime.now()} : Testing complete! ')
 
     print('Balanced accuracy score of the classifier on the {} test cases: {} '.format(len(Y_tst), balanced_score))

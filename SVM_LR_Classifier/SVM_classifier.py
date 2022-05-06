@@ -42,18 +42,19 @@ def SVM_classifier(X_trn, Y_trn, X_tst, Y_tst, kernel, model_name, train=True):
     print(f'{datetime.now()} : Model prepared! ')
 
     # the score of this training.
-    print(f'{datetime.now()} : Testing model...')
-    score_tst = clf.score(X_tst, Y_tst)
-    # positive_tst = score_tst>0.5
-    # print('positive prediction number', sum(positive_tst))
-
-    # f1 score.
+    print(f'{datetime.now()} : Testing model...it need at least 20 minutes to finish the test')
     Y_predict = clf.predict(X_tst)
 
+    # accuracy
+    score_tst = sum((Y_predict == Y_tst.numpy())) / len(Y_tst)
     positive_bool = Y_predict > 0.5
     print('positive prediction number', sum(positive_bool))
     print(f'total num of test:{len(X_tst)}')
+
+    # f1 score
     f1 = f1_score(Y_tst, Y_predict, zero_division=1)
+
+    # balanced_score
     balanced = balanced_accuracy_score(Y_tst, Y_predict)
     print(f'{datetime.now()} : Testing complete! ')
 
