@@ -114,9 +114,10 @@ class EdgeGrasper:
         fname4 = os.path.join(self.parameter_dir, fname4)
         self.model.load(fname1,fname2,fname3,fname4)
         print('Load the parameters from' + fname1)
+        self.epoch_num = n_iter
 
 parser = argparse.ArgumentParser(description='edge_grasper')
-parser.add_argument('--dataset_dir', type=str, default='./raw/foo')
+parser.add_argument('--dataset_dir', type=str, default='./raw/raw/foo')
 parser.add_argument('--load', type=int, default=0)
 parser.add_argument('--epoch', type=int, default=200)
 parser.add_argument('--sample_num', type=int, default=32)
@@ -130,6 +131,8 @@ def main(args):
     torch.manual_seed(1)
     cudnn.benchmark = True
     cudnn.deterministic = True
+    train = False
+    test = True
     #set up the dataset
     tr_dataset = Grasp_Dataset(root=args.dataset_dir, transform=Compose([GraspNormalization(),GraspAugmentation()]), train=True)
     tr_loader = DataLoader(tr_dataset[:], batch_size=1, shuffle=True)
@@ -137,8 +140,14 @@ def main(args):
     tst_loader = DataLoader(tst_dataset[:], batch_size=1, shuffle=False)
     print(len(tr_loader),len(tst_loader))
     # set up the model
-    edge_grasper = EdgeGrasper(device=1,root_dir='./store16', sample_num=args.sample_num, lr=0.5*1e-4, load=args.load)
+    edge_grasper = EdgeGrasper(device=1,root_dir='./store', sample_num=args.sample_num, lr=0.5*1e-4, load=args.load)
     #edge_grasper.test_draw(tr_dataset[3],learned=False)
-    edge_grasper.train_test_save(tr_loader,tst_loader,tr_epoch=args.epoch,test_interval=args.test_interval,save_interval=args.save_interval,log=False)
+    if train:
+        edge_grasper.train_test_save(tr_loader,tst_loader,tr_epoch=args.epoch,test_interval=args.test_interval,save_interval=args.save_interval,log=False)
+    if test:
+        print('load pretraining parameter and start testing, it might task several minutes')
+        edge_grasper.load(190)
+        edge_grasper.test(tst_loader)
+
 if __name__ == "__main__":
     main(args)
