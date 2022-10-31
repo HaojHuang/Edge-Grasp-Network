@@ -13,7 +13,7 @@ unzip raw.zip
 **Step 4.** Install other required packages
 
 ```shell
-python edge_grasper_revised5.py
+python edge_grasper_ball.py
 ```
 
 The reults are saved in `store` directory.
