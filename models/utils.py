@@ -2,7 +2,6 @@ import os.path
 import torch
 import numpy as np
 
-
 def get_geometry_mask(normals_dot,dot_product_2,relative_pos,des_normals,sample_normal,sample_pos,pos,strict=False):
     orth_mask = abs(normals_dot) < 0.1
     pitch_constrain_mask = abs(dot_product_2) < 0.1
