@@ -1,4 +1,5 @@
 # Package for Edge Grasp Network: A Graph-Based SE(3)-invariant Approach to Grasp Detection
+## status: incomplete
 
 If you want to generate the data by your own, you need to follow the readme here. Otherwise, go directly to the `model`.
 ## Installation
