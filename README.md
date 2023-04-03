@@ -65,7 +65,10 @@ Please refer to the [PointNet++](https://arxiv.org/abs/1706.02413) paper and the
 python test_clutter_grasp.py (--vn for the vector neuron version)
 ```
 
-Future Updates;
+## Future Updates:
+- Instruction that you can make a change for your own gripper: coming soon
+- Visualization Function to look at the grasps
+- Grasp filtering example.py (to select the grasp contact location, approach direction and etc. before feeding them to the model)
 
 
 
