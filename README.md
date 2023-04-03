@@ -64,7 +64,7 @@ python plot_test_loss_and_accuracy.py
 
 Please refer to the [PointNet++](https://arxiv.org/abs/1706.02413) paper and the [Vector Neuron](https://arxiv.org/abs/2104.12229) paper if you like to have more background.
 
-**step 3.** To test on simulated grasping with pretrained parameters (We provided the pretrained parameters in the folds of `edge_grasp_net_pretrained_para` and `vn_edge_pretrained_para`)
+**Step 3.** To test on simulated grasping with pretrained parameters (We provided the pretrained parameters in the folds of `edge_grasp_net_pretrained_para` and `vn_edge_pretrained_para`)
 
 ```shell
 python test_clutter_grasp.py (--vn for the vector neuron version)
