@@ -23,9 +23,9 @@ conda install mayavi -c conda-forge
 ```
 **Step 2.** Install [Pytorch](https://pytorch.org/get-started/locally/)
 
-**step 3.** Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
+**step 3.** Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html). Recommend to install from [wheels](https://data.pyg.org/whl/)
 
-**Step 4.** Install other required packages
+**Step 4.** Install other required packages (some packages are not listed here, but they should be easy to install with `pip`)
 
 ```shell
 pip install open3d
@@ -64,6 +64,9 @@ Please refer to the [PointNet++](https://arxiv.org/abs/1706.02413) paper and the
 ```shell
 python test_clutter_grasp.py (--vn for the vector neuron version)
 ```
+## Description
+Edge-Grasp-Net converges within 200 epochs while takes a shorter time for each step; VN-Edge-Grasp-Net converges within 100 epochs. Please read our paper for more details if needed.
+
 
 ## Future Updates:
 - Instruction that you can make a change for your own gripper (we used panda gripper in simulation): coming soon
