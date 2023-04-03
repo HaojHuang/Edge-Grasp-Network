@@ -1,11 +1,14 @@
 # Package for Edge Grasp Network: A Graph-Based SE(3)-invariant Approach to Grasp Detection
 
-[Project Website](https://haojhuang.github.io/edge_grasp_page/)&nbsp;&nbsp;•&nbsp;&nbsp;[PDF](https://arxiv.org/abs/2211.00191)&nbsp;&nbsp;•&nbsp;&nbsp; **ICRA 2023**
+[Project Website](https://haojhuang.github.io/edge_grasp_page/)&nbsp;&nbsp;•&nbsp;&nbsp;[PDF](https://arxiv.org/abs/2211.00191)&nbsp;&nbsp;•&nbsp;&nbsp; [Poster](https://drive.google.com/file/d/1Y5Myg-XBXbj9IkZjGn7QAt5z5Rf6ZoVd/view)&nbsp;&nbsp;•&nbsp;&nbsp; **ICRA 2023**
 
 <p align="center">
   <img width="550" src="image/grasp_example.png">
 </p>
 
+(a) Generalization to various objects sets : 92% grasp success rate in cluttered objects
+(b)
+(c)
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (Note: if you want to visualize the graps with mayavi, you need to get python 3.7 installed since vtk doesn't support 3.8+)
