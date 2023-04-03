@@ -10,7 +10,7 @@
 (b) Enable a good control on the generated grasp poses (e.g., generate graps with the same specific contact location, as shown in the figure above).<br>
 (c) Real time detection: more than 2000 grasps/15 ms with a common GPU.<br>
 
-Please check for our paper for more details
+Please check for our paper for more details.
 
 ## Installation
 **Step 1.** Recommended: install `conda` with (Note: if you want to visualize the graps with mayavi, you need to get Python 3.7 installed since vtk doesn't support 3.8+)
