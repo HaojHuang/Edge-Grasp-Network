@@ -7,7 +7,7 @@
 </p>
 
 (a) Generalize to various objects sets : 92% grasp success rate in cluttered objects.<br>
-(b) Generate graps with the same specific contact location (you can have a good control on the grasp pose).<br>
+(b) Enable a good control on the generated grasp poses (e.g., generate graps with the same specific contact location, as shown in the figure above).<br>
 (c) Real time detection: more than 2000 grasps/15 ms with a common GPU.<br>
 
 Please check for our paper for more details
