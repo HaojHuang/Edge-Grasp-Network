@@ -38,7 +38,7 @@ pip install pybullet==2.7.9
 ```
 
 ## Getting Started
-**Step 1.** Download the 3.7-Million grasp dataset from [the Google drive](https://drive.google.com/file/d/1ZA15hQ41mzMXShfkzKufF4pYTDjZgJWD/view?usp=share_link) or Generate your own training and validation dataset with the following scripts.
+**Step 1.** Download the 3.4-Million grasp dataset from [the Google drive](https://drive.google.com/file/d/1ZA15hQ41mzMXShfkzKufF4pYTDjZgJWD/view?usp=share_link) or Generate your own training and validation dataset with the following scripts.
 
 ```shell
 python clutter_grasp_data_generator.py --scene packed --object-set packed/train --sample_number 32
@@ -47,7 +47,7 @@ python clutter_grasp_data_generator.py --scene pile --object-set pile/train --sa
 
 **Step 2.** Train a model:
 
-Note that it will take more than 10 minutes at the first time to preprocess the data and store it in the drive for reuse. It needs at least 12GB free space to store the dataset in your drive.
+Note that if you are using the 3.4-Million grasps dataset, it will take more than 10 minutes at the first time to preprocess the data and store it in the drive for reuse. Also, it needs at least 12GB free space to store the dataset in your drive.
 
 To train a traditional PointNet++-based Model:
 ```shell
