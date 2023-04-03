@@ -28,7 +28,7 @@ conda install mayavi -c conda-forge
 
 **Step 2.** Install [Pytorch](https://pytorch.org/get-started/locally/)
 
-**step 3.** Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html). Recommend to install from [wheels](https://data.pyg.org/whl/)
+**Step 3.** Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html). Recommend to install from [wheels](https://data.pyg.org/whl/)
 
 **Step 4.** Install other required packages (some packages are not listed here, but they should be easy to install with `pip`)
 
