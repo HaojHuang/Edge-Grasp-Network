@@ -1,5 +1,6 @@
 # Package for Edge Grasp Network: A Graph-Based SE(3)-invariant Approach to Grasp Detection
 
+<img src="image/grasp_example.png"><br>
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (Note: if you want to visualize the graps with mayavi, you need to get python 3.7 installed since vtk doesn't support 3.8+)
