@@ -26,7 +26,7 @@ pip install pybullet==2.7.9
 
 ```shell
 python clutter_grasp_data_generator.py --scene packed --object-set packed/train --sample_number 32
-python clutter_grasp_data_generator.py --scene packed --object-set packed/train --sample_number 32
+python clutter_grasp_data_generator.py --scene pile --object-set pile/train --sample_number 32
 ```
 
 **Step 2.** Train a model:
