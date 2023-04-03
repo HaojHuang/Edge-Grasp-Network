@@ -66,7 +66,7 @@ python test_clutter_grasp.py (--vn for the vector neuron version)
 ```
 
 ## Future Updates:
-- Instruction that you can make a change for your own gripper: coming soon
+- Instruction that you can make a change for your own gripper (we used panda gripper in simulation): coming soon
 - Visualization Function to look at the grasps
 - Grasp filtering example.py (to select the grasp contact location, approach direction and etc. before feeding them to the model)
 
