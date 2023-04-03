@@ -72,7 +72,7 @@ Edge-Grasp-Net converges within 200 epochs while takes a shorter time for each s
 - Instruction that you can make a change for your own gripper (we used panda gripper in simulation): coming soon
 - Visualization Function to look at the grasps
 - Grasp filtering example.py (to select the grasp contact location, approach direction and etc. before feeding them to the model)
-
+- ROS package that take the input as the raw point cloud and output the scored grasps
 
 
 
