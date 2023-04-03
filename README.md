@@ -13,14 +13,19 @@
 Please check for our paper for more details
 
 ## Installation
-**Step 1.** Recommended: install `conda` with Python 3.7 (Note: if you want to visualize the graps with mayavi, you need to get python 3.7 installed since vtk doesn't support 3.8+)
+**Step 1.** Recommended: install `conda` with (Note: if you want to visualize the graps with mayavi, you need to get Python 3.7 installed since vtk doesn't support 3.8+)
 
 ```shell
-conda create -n edge_grasp python=3.7
+conda create -n edge_grasp (python=3.7)
 conda activate edge_grasp
+```
+Install mayavi (you can skip thi step if you don't need to visulize the generated grasps, we will provide the visulization code for grasps later)
+
+```shell
 pip install opencv-python pillow scipy matplotlib
 conda install mayavi -c conda-forge
 ```
+
 **Step 2.** Install [Pytorch](https://pytorch.org/get-started/locally/)
 
 **step 3.** Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html). Recommend to install from [wheels](https://data.pyg.org/whl/)
