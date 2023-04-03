@@ -6,9 +6,11 @@
   <img width="550" src="image/grasp_example.png">
 </p>
 
-(a) Generalization to various objects sets : 92% grasp success rate in cluttered objects
-(b)
-(c)
+(a) Generalize to various objects sets : 92% grasp success rate in cluttered objects.<br>
+(b) Generate graps with the same specific contact location (you can have a good control on the grasp pose).<br>
+(c) Real time detection: 2000 grasps/15 ms.<br>
+
+Please check for our paper for more details
 
 ## Installation
 **Step 1.** Recommended: install `conda` with Python 3.7 (Note: if you want to visualize the graps with mayavi, you need to get python 3.7 installed since vtk doesn't support 3.8+)
