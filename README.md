@@ -13,7 +13,7 @@
 Please check for our paper for more details.
 
 ## Installation
-**Step 1.** Recommended: install `conda` with (Note: if you want to visualize the graps with mayavi, you need to get Python 3.7 installed since vtk doesn't support 3.8+)
+**Step 1.** Recommended: install `conda` with (Note: if you want to visualize the graps with mayavi, you need to get Python 3.7 installed since vtk doesn't support 3.8+ based on my knowledge)
 
 ```shell
 conda create -n edge_grasp (python=3.7)
