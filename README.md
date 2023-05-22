@@ -66,7 +66,7 @@ python plot_test_loss_and_accuracy.py
 
 Please refer to the [PointNet++](https://arxiv.org/abs/1706.02413) paper and the [Vector Neuron](https://arxiv.org/abs/2104.12229) paper if you like to have more background.
 
-**Step 3.** To test on simulated grasping with pretrained parameters (We provided the pretrained parameters in the folds of `edge_grasp_net_pretrained_para` and `vn_edge_pretrained_para`)
+**Step 3.** To test on simulated grasping with pretrained parameters (We provided the pretrained parameters in the folds of `edge_grasp_net_pretrained_para` and `vn_edge_pretrained_para`). *You can directly test the model without dataset (step 1) and training (step 2)!*
 
 ```shell
 python test_clutter_grasp.py (--vn for the vector neuron version)
@@ -80,10 +80,6 @@ Edge-Grasp-Net converges within 200 epochs while takes a shorter time for each s
 - Visualization Function to look at the grasps
 - Grasp filtering example.py (to select the grasp contact location, approach direction and etc. **before** feeding them to the model)
 - ROS package that takes the input as the raw point cloud and output the scored grasps
-
-
-
-
 
 
 
