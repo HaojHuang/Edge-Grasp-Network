@@ -1,6 +1,6 @@
 # Package for Edge Grasp Network: A Graph-Based SE(3)-invariant Approach to Grasp Detection
 
-[Project Website](https://haojhuang.github.io/edge_grasp_page/)&nbsp;&nbsp;•&nbsp;&nbsp;[PDF](https://arxiv.org/abs/2211.00191)&nbsp;&nbsp;•&nbsp;&nbsp; [Poster](https://drive.google.com/file/d/1Y5Myg-XBXbj9IkZjGn7QAt5z5Rf6ZoVd/view)&nbsp;&nbsp;•&nbsp;&nbsp; **ICRA 2023**
+[Project Website](https://haojhuang.github.io/edge_grasp_page/)&nbsp;&nbsp;•&nbsp;&nbsp;[PDF](https://arxiv.org/abs/2211.00191)&nbsp;&nbsp;•&nbsp;&nbsp; [Poster](https://drive.google.com/file/d/1Y5Myg-XBXbj9IkZjGn7QAt5z5Rf6ZoVd/view)&nbsp;&nbsp;•&nbsp;&nbsp;[Videos](https://www.youtube.com/playlist?list=PLtEvDdcT-Ai9L4HPG1F3YHGOUK4qi2Yiz)&nbsp;&nbsp;•&nbsp;&nbsp; **ICRA 2023**
 
 <p align="center">
   <img width="550" src="image/grasp_example.png">
